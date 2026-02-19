@@ -147,9 +147,9 @@
         However, while the Global Privacy Control is designed to allow users to express a preference to opt out
         of sharing and cross-context targeted advertising, the control is not intended to exercise every possible
         privacy right, nor even every right to opt out of advertising or ad targeting. GPC is not designed to
-        exercise deletion rights, for example. GPC is also not designed to address [=same site=] data collection and
-        [=same site=] ad targeting. For more details, see the
-        <a href="https://w3c.github.io/gpc/explainer" target="_blank">Legal and Implementation Considerations Guide</a>
+        exercise deletion rights, for example. GPC is also not designed to address data collection or ad targeting
+        within the same <a data-link-type="dfn" href="https://www.w3.org/TR/privacy-principles/#dfn-context">context</a>. For more details, see the
+        <a href="https://w3c.github.io/gpc/explainer" target="_blank">Legal and Implementation Considerations Guide</a>.
       </p>
       <p>
         The specification should not be interpreted as an endorsement of the opt-out model of
@@ -187,7 +187,7 @@
           <code>true</code> according to context.
         </p>
         <p>
-          In the absence of regulatory, legal, or other requirements, websites MAY interpret an
+          In the absence of regulatory, legal, or other requirements, websites can interpret an
           expressed Global Privacy Control [=preference=] as they find most appropriate for the given
           person, particularly as considered in light of the person's privacy expectations, context, and
           cultural circumstances. Likewise, websites might make use of other [=preference=] information
@@ -572,12 +572,12 @@
       <var>parameters</var> are:
 
       <ol>
-        <li><p>If the user's [=preference=] for this |session|  issuch that the browser will
+        <li><p>If the user's [=preference=] for this |session| is such that the browser will
           perform [=do-not-sell-or-share interaction|do-not-sell-or-share interactions=], let
           |gpc| be true.
         <li><p>Otherwise, let |gpc| be false.
         <li><p>Let |result| be a JSON [=Object=] with property "<code>gpc</code>" set to |gpc|.
-        <li><p>Return [=success=] with data `null`.
+        <li><p>Return [=success=] with data `result`.
       </ol>
 
     </section>
